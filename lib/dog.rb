@@ -70,9 +70,6 @@ class Dog
     dog = DB[:conn].execute(sql, id).map do |row|
       self.new_from_db(row)
     end.first
-  #   binding.pry
-  #   dog_data = dog[0]
-  #   dog = Dog.new(id: dog_data[0], name: dog_data[1], breed: dog_data[2])
    end
 
   def self.find_or_create_by(name:, breed:)
